@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+:root {
+  --primary: #22254b;
+  --secondary: #373b69;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', serif;
+  background: var(--primary);
+  overflow-x: hidden;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background: var(--secondary);
+}
+
+input {
+  background: transparent;
+  border: 2px solid var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  color: #fff;
+  font-family: inherit;
+}
+
+input::placeholder {
+  color: #7378c5;
+}
+
+input:focus {
+  outline: 0;
+  background: var(--primary);
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 300px;
+  margin: 10px;
+  background: var(--secondary);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: #fff;
+  letter-spacing: 0.8px;
+}
+
+.movie-info span {
+  padding: 0.5rem;
+  background: var(--primary);
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orangered;
+}
+
+.movie-info span.red {
+  color: darkred;
+}
+
+.overview {
+  background: #fff;
+  padding: 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}

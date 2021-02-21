@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+
+:root {
+  --primary: #000;
+  --secondary: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html.dark {
+  --primary: #fff;
+  --secondary: #333;
+  background: #111;
+  color: var(--primary);
+}
+
+body {
+  font-family: 'Heebo', serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.toggle {
+  background: var(--primary);
+  color: var(--secondary);
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  top: 100px;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.needle {
+  width: 3px;
+  height: 65px;
+  background: var(--primary);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: 0.3s ease;
+  transform-origin: bottom;
+}
+
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+
+.needle.second {
+  transform: translate(-50%, -100%) rotate(30deg);
+  height: 100px;
+  background: #e74c3c;
+}
+
+.center-point {
+  background: #e74c3c;
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.center-point::after {
+  content: '';
+  background: var(--primary);
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.circle {
+  background: var(--primary);
+  color: var(--secondary);
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  font-size: 12px;
+}
+
+.time {
+  font-size: 60px;
+}
+
+.date {
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}

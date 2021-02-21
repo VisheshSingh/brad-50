@@ -6,6 +6,10 @@ const timeEl = document.querySelector('.time');
 const toggle = document.querySelector('.toggle');
 const htmlEl = document.body.parentNode;
 
+const needleSecond = document.querySelector('.needle.second');
+const needleMinute = document.querySelector('.needle.minute');
+const needleHour = document.querySelector('.needle.hour');
+
 toggle.addEventListener('click', () => {
   htmlEl.classList.toggle('dark');
 
@@ -54,7 +58,7 @@ function setTime() {
   const min = time.getMinutes();
   const sec = time.getSeconds();
   const ampm = hour >= 12 ? 'PM' : 'AM';
-  //   console.log({ month, day, date, hourByClock, min, sec });
+  //   console.log({ hourByClock, min, sec });
 
   hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     hourByClock,
@@ -82,6 +86,14 @@ function setTime() {
     min < 10 ? `0${min}` : `${min}`
   } ${ampm}`;
   dateEl.innerHTML = `${weekdays[day]}, ${months[month]} <span class='circle'>${date}</span>`;
+
+  needleHour.style.transition = `${
+    hourByClock === 0 ? 'none' : 'all 0.03s ease-in'
+  }`;
+
+  needleMinute.style.transition = `${min === 0 ? 'none' : 'all 0.03s ease-in'}`;
+
+  needleSecond.style.transition = `${sec === 0 ? 'none' : 'all 0.03s ease-in'}`;
 }
 
 setTime();

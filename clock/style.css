@@ -57,7 +57,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transition: 0.3s ease;
+  transition: 0.03s ease;
   transform-origin: bottom;
 }
 

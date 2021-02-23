@@ -8,10 +8,12 @@
 
 body {
   font-family: 'Quicksand', serif;
+  height: 100vh;
 }
 
-.slide-container {
+.slider-container {
   width: 100vw;
+  height: 100vh;
   position: relative;
 }
 
@@ -21,6 +23,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  transition: transform 0.5s ease-in-out;
 }
 
 .left-slide > div {
@@ -44,6 +47,7 @@ body {
   position: absolute;
   top: 0;
   left: 35%;
+  transition: transform 0.5s ease-in-out;
 }
 
 .right-slide > div {

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', serif;
+}
+
+.slide-container {
+  width: 100vw;
+  position: relative;
+}
+
+.left-slide {
+  width: 35%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.left-slide > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.left-slide h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.right-slide {
+  width: 65%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 35%;
+}
+
+.right-slide > div {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem 0.5rem;
+  background: #fff;
+  color: #aaa;
+  font-size: 1rem;
+  border: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #222;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button.up-arrow {
+  top: 50%;
+  left: 35%;
+  transform: translateY(-50%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+button.down-arrow {
+  top: 50%;
+  left: 35%;
+  transform: translate(-100%, 50%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}

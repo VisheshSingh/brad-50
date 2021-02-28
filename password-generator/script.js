@@ -64,3 +64,15 @@ function generatePassword(lower, upper, num, symbol, length) {
   }
   return pwd.slice(0, length);
 }
+
+function copyToClipboard() {
+  const textarea = document.createElement('textarea');
+  textarea.value = result.innerText;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+  alert('Password copied to clipboard');
+}
+
+clipboard.addEventListener('click', copyToClipboard);

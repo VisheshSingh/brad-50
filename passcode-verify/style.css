@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  font-family: 'Muli', serif;
+}
+
+.container {
+  width: 800px;
+  text-align: center;
+  border: 3px solid #333;
+  border-radius: 4px;
+  padding: 2rem 0 0.5rem 0;
+}
+
+p {
+  margin: 0.5rem;
+  line-height: 1.5;
+}
+
+small {
+  font-size: 0.8rem;
+  background: #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  display: block;
+  width: 400px;
+  margin: 8px auto;
+  color: #777;
+}
+
+.code-container {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.code {
+  font-size: 75px;
+  height: 120px;
+  width: 100px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin: 1%;
+  text-align: center;
+}
+
+.code:valid {
+  border-color: #1349be;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+}
+
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 90%;
+  }
+  .code {
+    width: 80px;
+    height: 100px;
+    font-size: 50px;
+  }
+}

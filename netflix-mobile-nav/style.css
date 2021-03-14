@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Muli';
+}
+
+.text {
+  text-transform: uppercase;
+  margin-top: -20px;
+}
+
+.nav-btn {
+  font-size: 20px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.open-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav.visible {
+  transform: translateX(0);
+}
+
+.nav-black {
+  width: 60%;
+  min-width: 320px;
+  max-width: 480px;
+  background: #333;
+  transition-delay: 0.4s;
+}
+
+.nav-black.visible {
+  transition-delay: 0s;
+}
+
+.nav-red {
+  width: 95%;
+  background: #db1e1e;
+  transition-delay: 0.2s;
+}
+
+.nav-black.visible {
+  transition-delay: 0s;
+}
+
+.nav-white {
+  width: 95%;
+  background: #fff;
+  padding: 40px;
+  position: relative;
+  transition-delay: 0s;
+}
+
+.nav-white.visible {
+  transition-delay: 0.4s;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.3;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list li {
+  margin: 20px 0;
+}
+
+.list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.list ul {
+  list-style-type: none;
+  padding-left: 20px;
+}

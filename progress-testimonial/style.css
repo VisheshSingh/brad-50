@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat';
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  padding: 10px;
+}
+
+.testimonial-container {
+  background: #4234c4;
+  color: #fff;
+  margin: 20px 0;
+  padding: 50px 80px;
+  position: relative;
+  border-radius: 15px;
+  max-width: 768px;
+}
+
+.fa-quote {
+  position: absolute;
+  top: 70px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 28px;
+}
+
+.fa-quote-right {
+  left: 50px;
+}
+
+.fa-quote-left {
+  right: 50px;
+}
+
+.testimonial {
+  line-height: 28px;
+  text-align: justify;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user img {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+}
+
+.user-details {
+  margin-left: 10px;
+}
+
+.user-details h4 {
+  margin: 0;
+}
+
+.user-details p {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: #fff;
+  width: 100%;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}

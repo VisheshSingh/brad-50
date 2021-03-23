@@ -37,7 +37,7 @@ body {
 }
 
 .screen.up {
-  margin-top: -200vh;
+  margin-top: -100vh;
 }
 
 .choose-insect-btn img {
@@ -75,4 +75,62 @@ body {
 
 .choose-insect-btn:active {
   background-color: rgba(255, 255, 255, 0.7);
+}
+
+.game-container {
+  position: relative;
+}
+
+#time,
+#score {
+  position: absolute;
+  top: 0;
+}
+
+#time {
+  left: 20px;
+}
+
+#score {
+  right: 20px;
+}
+
+#message {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  line-height: 1.7;
+  z-index: 10;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -150%);
+  transition: transform 0.3s linear;
+  opacity: 0;
+}
+
+#message.visible {
+  transform: translate(-50%, 150%);
+  opacity: 1;
+}
+
+.insect {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.insect.caught {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.insect img {
+  width: 100px;
+  height: 100px;
 }
